@@ -47,3 +47,6 @@ npx firebase-tools deploy --only functions:deal,firestore:rules --project teenpa
 ## Update the website
 
 `git subtree push --prefix docs origin gh-pages` (Claude does this for you).
+
+## Online play (Oct 2026)
+Online tables no longer need the Firebase function. The host's browser runs the same server code (`srv/`) and friends connect straight to the host, same as Ultimate Hold'em. See `p2p/core.js`. If the host closes the page the table pauses until they come back; a refresh is fine.
